@@ -1,16 +1,18 @@
-![WS2812FX library](https://raw.githubusercontent.com/kitesurfer1404/WS2812FX/master/WS2812FX_logo.png)
+![WS2812FX library](https://raw.githubusercontent.com/amdprophet/WS2812FX/master/WS2812FX_logo.png)
 
 WS2812FX - More Blinken for your LEDs!
 ======================================
 
-This library features a variety of blinken effects for the WS2811/WS2812/NeoPixel LEDs. It is meant to be a drop-in replacement for the Adafruit NeoPixel library with additional features.
+This is a Particle-compatible fork of https://github.com/kitesurfer1404/WS2812FX.
+
+This library features a variety of blinken effects for the WS2811/WS2812/NeoPixel LEDs. It is meant to be a drop-in replacement for the Particle NeoPixel library with additional features.
 
 Features
 --------
 
 * 53 different effects. And counting.
 * Free of any delay()
-* Tested on Arduino Nano, Uno, Micro and ESP8266.
+* Tested on Particle Photon.
 * All effects with printable names - easy to use in user interfaces.
 * FX, speed and brightness controllable on the fly.
 * Ready for sound-to-light (see external trigger example)
@@ -19,11 +21,8 @@ Features
 Download, Install and Example
 -----------------------------
 
-* Install the famous [Adafruit NeoPixel library](https://github.com/adafruit/Adafruit_NeoPixel)
-* Download this repository.
-* Extract to your Arduino libraries directory.
-* Open Arduino IDE.
-* Now you can choose File > Examples > WS2812FX > ...
+* Install the [Particle NeoPixel library](https://github.com/technobly/Particle-NeoPixel)
+* Install this library (Should show up as WS2812FX under the Particle library browser)
 
 See examples for basic usage.
 

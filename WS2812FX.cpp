@@ -52,6 +52,7 @@
   2018-02-24   added hooks for user created custom effects
 */
 
+#include <math.h>
 #include "WS2812FX.h"
 
 void WS2812FX::init() {
@@ -152,10 +153,10 @@ void WS2812FX::setLength(uint16_t b) {
   do {
       Adafruit_NeoPixel::updateLength(b);
       b--;
-  } while(!Adafruit_NeoPixel::numLEDs && b > 1);
+  } while(!Adafruit_NeoPixel::getNumLeds() && b > 1);
 
   _segments[0].start = 0;
-  _segments[0].stop = Adafruit_NeoPixel::numLEDs - 1;
+  _segments[0].stop = Adafruit_NeoPixel::getNumLeds() - 1;
 }
 
 void WS2812FX::increaseLength(uint16_t s) {
@@ -223,7 +224,7 @@ WS2812FX::Segment* WS2812FX::getSegments(void) {
   return _segments;
 }
 
-const __FlashStringHelper* WS2812FX::getModeName(uint8_t m) {
+const char* WS2812FX::getModeName(uint8_t m) {
   if(m < MODE_COUNT) {
     return _name[m];
   } else {
