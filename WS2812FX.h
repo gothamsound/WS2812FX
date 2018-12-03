@@ -37,7 +37,8 @@
 #ifndef WS2812FX_h
 #define WS2812FX_h
 
-#include <Adafruit_NeoPixel.h>
+//#include “Adafruit_NeoPixel.h”
+#include "neopixel-nrf.h"
 
 #define DEFAULT_BRIGHTNESS 50
 #define DEFAULT_MODE 0
